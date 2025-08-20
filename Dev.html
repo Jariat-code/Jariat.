@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>adamujariatcalculator</title>
+    <style>
+
+    * {
+  box-sizing: border-box;
+}
+ 
+    body{
+   text-align:center;
+   border-radius:2px;
+   background-color:rgb(7, 5, 11,0.2);
+   }
+    .cal{
+      border:2px solid lightyellow;
+      padding:10px;
+      width:70%;
+      max-width:400px;
+      background-color:lightyellow;
+      border-radius:2px;
+      margin:0 auto;
+      height:auto;
+
+    }
+    header{
+    padding:6px 10px;
+    margin:8px 0 ;
+    background-color:rgb(100, 100, 100,0.5);
+    font-size:2px;
+    }
+    .span{
+    display:flex;
+    justify-content:center;
+    margin-bottom:3px;
+    
+    }
+    button{
+    width:22%;
+    height:70px;
+    margin:5px 1.5px;
+  align-items: center;
+    font-size:30px;
+    display: flex;    
+    justify-content: center;
+    border:none;
+    transition: background-color 0.2s ease;
+    }
+    input{
+    width:90%;
+      padding: 10px;
+  font-size: 30px;
+  text-align: right;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+height:20vh;
+  background-color: #f1f1f1;
+  max-width:400px;
+    }
+ .equal{
+display:flex;
+justify-content:center;
+}
+.equal button{
+width:80%;
+background-color:rgb(255, 187, 102);
+border:none;
+border-radius:35px;
+color:black;
+}
+  
+.clear {
+background-color:rgb(160, 160, 160);
+border:none;
+color:black;
+}
+.yeah{
+background-color:rgb(255, 187, 102);
+color:black;
+}
+button:hover {
+    background-color: grey;
+}
+button:active {
+    background-color: rgb(60, 60, 60);
+}
+h2{
+color:black;
+text-shadow:2px 2px 2px white,3px 2px 2px black,2px 2px 2px black;
+font-weight:100;
+font-size:10px;
+  font-style: oblique;
+}
+h1{
+color:black;
+text-shadow:2px 2px 2px white,3px 2px 2px black,2px 2px 2px black;
+font-weight:100;
+font-size:10px;
+font-family: 'Times New Roman', serif; 
+}
+    </style>
+</head>
+<body>
+   <header>
+   <div>
+   <h1 style="text-align:center";>DESIGN A CALCULATOR WITH HTML AND CSS</h1>
+   <h2 style="text-align:center";> SOFTWARE AND WEB<br> DEVELOPMENT</h2>
+ <h2 style="text-align:center";>BY <br> ADAMU JARIAT</h2>
+<h1 style="text-align:center";> ICT/2252410051</h1>
+</div>
+</header>
+<div class="cal">
+<div>
+    <input type="text" id="display" placeholder="0">
+    </div>
+    <div class="span">
+    <button onclick="showMessage('7')">7</button>
+    <button onclick="showMessage('8')">8</button>
+    <button onclick="showMessage('9')">9</button>
+    <button class="yeah" onclick="showMessage('/')">/</button>
+ </div>
+   <div class="span">
+    <button  onclick="showMessage('4')" >4</button>
+    <button onclick="showMessage('5')">5</button>
+    <button onclick
+    ="showMessage('6')"  >6</button>
+    <button class="yeah" onclick="showMessage('*')" >*</button>
+ </div>
+    <div class="span">
+    <button onclick="showMessage('1')" >1</button>
+    <button onclick="showMessage('2')" >2</button>
+    <button onclick="showMessage('3')" >3</button>
+    <button class="yeah" onclick="showMessage('-')" >-</button>
+</div>
+    <div class="span">
+    <button onclick="showMessage('0')" >0</button>
+    <button onclick="showMessage('.')"  >.</button>
+    <button class="clear" onclick="clearDisplay()">C</button>
+    <button class="yeah" onclick="showMessage('+')"  >+</button>
+     </div>
+     <div class="equal">
+    <button class="yeah" onclick="calculate( )" >=</button>
+    </div>
+    </div>
+    <script>
+ function showMessage(value){
+ const display =document.getElementById("display");display.value+=value;
+ }
+ function calculate(){
+ const display=document.getElementById("display");display.value=eval(display.value);
+ }
+ 
+ function clearDisplay() {
+    const display = document.getElementById("display");
+    display.value = "";
+}
+ </script>
+</body>
+</html>
